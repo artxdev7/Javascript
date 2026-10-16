@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .nome {
+            text-align: center;
+            background-color: rgba(0, 0, 255, 0.326);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var nome = window.prompt('qual seu nome? ')
+        document.write(` <p class="nome">ola <strong>${nome.toLocaleUpperCase()}</strong> seu nome tem ${nome.length} letras </p> <br>`)
+        document.write(`<p class="nome">seu nome em maisculo é ${nome.toUpperCase()}</p> </br>`)
+        document.write(`<p class="nome"> em minusculo ${nome.toLowerCase()}</p>`)
+    </script>
+</body>
+
+</html>
