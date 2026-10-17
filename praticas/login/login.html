@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medias.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person,password" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <img src="https://i.pinimg.com/736x/bf/38/4c/bf384c660a6aa65e0df503effc7fdf71.jpg" alt="">
+        <h1>Login</h1>
+        <p>faça seu login para acessar o conteudo do site</p>
+        <form action="index.html" method="post">
+            <div id="gmail">
+                <label for="email"><span class="material-symbols-outlined" id="user">
+                        person
+                    </span></label>
+                <input type="text" name="email" id="email" required placeholder="seu nome">
+            </div>
+            <div id="senha">
+                <label for="passwor"><span class="material-symbols-outlined" id="password">
+                        password
+                    </span></label>
+                <input type="password" name="password" id="passwor" required placeholder="password" minlength="0"
+                    maxlength="8">
+            </div>
+            <div class="button">
+                <input type="submit" value="enviar" id="e">
+                <input type="reset" value="resetar" class="r">
+            </div>
+        </form>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>

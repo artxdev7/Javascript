@@ -1,0 +1,91 @@
+@media screen and (min-width: 800px) and (max-width:990px) {
+
+
+    main {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto;
+
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }
+
+    p {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    form {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    h1 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    h1,
+    p {
+        margin: 0%;
+    }
+
+    #gmail,
+    #senha {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+
+
+    main {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto;
+        width: 700px;
+
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }
+
+    p {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    form {
+        position: relative;
+        top: 0%;
+        left: 17%;
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .button {
+        position: relative;
+        top: 0%;
+        left: -14%;
+    }
+
+    h1 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    h1,
+    p {
+        margin: 0%;
+    }
+
+}
