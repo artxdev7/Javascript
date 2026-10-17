@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medidor de aura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <main>
+        <h1>MEDIDOR DE AURA</h1>
+
+        <p>
+            <label for="67">escolha um numero:</label>
+            <input type="number" name="67" id="aura">
+            <input type="button" value="enviar" onclick="aura()">
+
+        </p>
+        <div id="res">CALCULANDO...</div>
+
+    </main>
+    <script>
+        function aura() {
+            var n1 = document.querySelector('#aura')
+            var res = document.querySelector('#res')
+            var img = document.createElement("img")
+
+            if (n1.value == 67) {
+                img.src = 'mr.aura.jpg'
+                res.innerHTML = '<strong>voce tem muita aura</strong>'
+                res.appendChild(img)
+                img.style.width = '100px'
+            } else {
+                img.src = 'sem-aura.jpg'
+                res.innerHTML = '<strong>voce não tem  aura</strong>'
+                res.appendChild(img)
+                img.style.width = '100px'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

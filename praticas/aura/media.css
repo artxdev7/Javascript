@@ -1,0 +1,10 @@
+@media screen and (min-width: 800px) {
+    body {
+        background-size: contain;
+    }
+
+    main {
+        width: 418px;
+    }
+
+}
