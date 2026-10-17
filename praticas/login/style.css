@@ -54,11 +54,19 @@ p {
         'opsz' 24
 }
 
+span {
+    position: absolute;
+    left: 5px;
+}
+
 div {
+    position: relative;
     padding: 5px;
+    padding-left: 30px;
     background-color: rgb(177, 235, 254);
     border-radius: 10px;
     box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.532);
+    width: 200px;
 }
 
 #user {
