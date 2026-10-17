@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificar idade</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 96vh;
+            background-color: rgb(83, 195, 83);
+
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 500px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.447);
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Verifique sua idade</h1>
+    <main>
+        ano de nascimento: <input type="number" name="" id="idade" required> <br>
+        sexo: <input type="radio" name="sexo" id="sexoM">M
+        <input type="radio" name="sexo" id="sexoF">F<br>
+        <input type="button" value="verificar" id="enviar" onclick="calculo()">
+        <div id="res"> prencha os dados acima para ver o resultado!</div>
+    </main>
+    <script>
+        function calculo() {
+            var agora = new Date()
+            var ano = agora.getFullYear()
+            var idadeInput = document.querySelector('#idade')
+            var M = document.querySelector('#sexoM')
+            var F = document.querySelector('#sexoF')
+            var res = document.querySelector('#res')
+
+            if (idadeInput.value > ano) {
+                res.innerHTML = 'insira um ano valido'
+            } else {
+                var idade = ano - Number(idadeInput.value)
+                var genero = ''
+            }
+
+            if (M.checked) {
+                genero = 'um homem'
+                res.innerHTML = `detectamos ${genero} com a idade de ${idade} anos <img src ="https://i.pinimg.com/736x/5a/e9/f4/5ae9f494fd6f16faf448a2f06a48f249.jpg"  style="width: 200px;border-radius:100px; margin: auto; text-align: center;">`
+                document.body.style.backgroundColor = "rgb(58, 58, 175)"
+            } else if (F.checked) {
+                genero = 'um mulher'
+
+                res.innerHTML = `detectamos ${genero} com a idade de ${idade} anos <img src ="https://i.pinimg.com/1200x/7e/07/8f/7e078facecdd608549971a5f3d0a769a.jpg"  style="width: 200px;border-radius:100px; margin: auto; text-align: center;"> `
+                document.body.style.backgroundColor = "rgb(251, 200, 208)"
+
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

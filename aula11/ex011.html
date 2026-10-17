@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passaporte</title>
+</head>
+
+<body>
+    <h1>voce é do brasil?</h1>
+    de onde voce é?: <input type="text" name="pais" id="pais">
+    <input type="button" value="enviar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+
+        function verificar() {
+            var bra = "brasil"
+            var pais = document.querySelector('#pais')
+            var res = document.querySelector('#res')
+            if (bra == pais.value) {
+                res.innerHTML = '<p>voce é brasileiro</p>'
+
+            } else {
+                res.innerHTML = '<p> voce é estrangeiro</p>'
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
