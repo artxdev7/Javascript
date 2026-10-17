@@ -1,17 +1,11 @@
-var botaoEnviar = document.querySelector('#e');
-var email = document.querySelector('#email');
+var usuario = document.querySelector('#user')
+var enviar = document.querySelector('#submit')
 
-botaoEnviar.addEventListener("click", function (event) {
+enviar.addEventListener("click", informe)
 
-    if (email.value === "") {
-        alert('insira seu nome')
-    } else {
-        event.preventDefault();
-        var diemail = email.value;
-        localStorage.setItem("usuario", diemail);
-        alert("Valor guardado");
-        window.location.href = "index.html";
-    }
+function informe(event) {
+    event.preventDefault()
+    localStorage.setItem("user", usuario.value)
+    window.location.href = "index.html"
 
-
-});
+}

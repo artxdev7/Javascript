@@ -1,16 +1,39 @@
-var menu = document.querySelector('#menu');
-var conteudo = document.querySelector('#conteudo');
-var res = document.querySelector('#res')
-var usuarioSalvo = localStorage.getItem("usuario")
+var menu = document.querySelector('#menu')
+var nav = document.querySelector('#hamburguer')
+var Config = document.querySelector('#config')
+var menuConfig = document.querySelector('#menuconfig')
+var close = document.querySelector('#close')
+var dark = document.querySelector('#bt-dark')
+var msg = document.querySelector('#res')
+var user = localStorage.getItem("user")
+
+msg.innerHTML = `seja bem vindo(a) <strong>${user}</strong> <br/> o arthur fez esse site`
 
 menu.addEventListener("click", hamburguer);
-
-res.innerHTML = `seja bem vindo(a) <strong>${usuarioSalvo}</strong>`
-
 function hamburguer() {
-    if (conteudo.style.display === "none" || conteudo.style.display === "") {
-        conteudo.style.display = "flex";
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex"
     } else {
-        conteudo.style.display = "none";
+        nav.style.display = "none"
     }
+}
+
+close.addEventListener("click", fechar)
+function fechar() {
+    menuConfig.style.display = "none"
+}
+
+Config.addEventListener("click", menuConfigura)
+function menuConfigura() {
+    if (menuConfig.style.display === "none" || menuConfig.style.display === "") {
+        nav.style.display = "none"
+        menuConfig.style.display = "flex"
+    } else {
+        menuConfig.style.display = "none"
+    }
+}
+
+dark.addEventListener("click", darkmode)
+function darkmode() {
+    document.body.classList.toggle("darkmode")
 }
