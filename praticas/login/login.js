@@ -4,7 +4,7 @@ var senha = document.querySelector('#password');
 
 botaoEnviar.addEventListener("click", function (event) {
     event.preventDefault();
-    if (email.value !== "" && senha.value !== "") {
+    if (email.value === "" && senha.value === "") {
         var diemail = email.value;
         var disenha = senha.value;
 
