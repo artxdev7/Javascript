@@ -1,21 +1,22 @@
 :root {
-    --destaque: #FBDA3D;
-    --bgClaro: #CFE8ED;
-    --bgEscuro: #77ACCC;
-    --azulMedio: #B6E1EA;
-    --azulEscuro: #4D85B4;
-    --texto: black;
-
-}
-
-
-body.darkmode {
     --destaque: #FFE066;
     --bgClaro: #1E293B;
     --bgEscuro: #0F172A;
     --azulMedio: #334155;
     --azulEscuro: #38BDF8;
     --texto: #F8FAFC;
+
+}
+
+
+body.darkmode {
+    --destaque: #a1a100;
+    --bgClaro: #CFE8ED;
+    --bgEscuro: #77ACCC;
+    --azulMedio: #B6E1EA;
+    --azulEscuro: #4D85B4;
+    --texto: black;
+
 }
 
 * {
@@ -170,6 +171,8 @@ header>h1 {
 
 
 article {
+    display: flex;
+    flex-flow: column wrap;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
     border-radius: 10px;
     margin: auto;
@@ -187,7 +190,24 @@ article>h2 {
 }
 
 article>p {
-    text-align: justify;
+    text-align: center;
     text-indent: 10px;
     margin-top: 10px;
+}
+
+#logo {
+    align-self: center;
+    border-radius: 50%;
+    width: 50px;
+}
+
+#juramento {
+    align-self: center;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+span {
+    color: var(--destaque);
 }

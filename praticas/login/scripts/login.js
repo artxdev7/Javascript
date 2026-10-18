@@ -6,6 +6,6 @@ enviar.addEventListener("click", informe)
 function informe(event) {
     event.preventDefault()
     localStorage.setItem("user", usuario.value)
-    window.location.href = "index.html"
+    window.location.href = "blue.html"
 
 }
