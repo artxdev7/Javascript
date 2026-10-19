@@ -82,6 +82,7 @@ div {
     background-color: var(--azulMedio);
     border-radius: 3px;
     border: none;
+    cursor: pointer;
 }
 
 #submit:hover {
