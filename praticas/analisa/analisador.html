@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            flex-flow: column wrap;
+            background-color: rgb(61, 168, 255);
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.349);
+        }
+
+        section {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-flow: column wrap;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.409);
+            border-radius: 10px;
+        }
+
+        #inicio,
+        #salto,
+        #fim {
+            width: 50%;
+        }
+
+        #enviar,
+        #limpar {
+            width: 50%;
+            margin-top: 5px;
+        }
+
+        footer {
+            margin-top: 10px;
+            color: white;
+            background-color: rgb(0, 107, 161);
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+        div {
+            font-size: 10pt;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ANALISADOR DE NUMERO</h1>
+    </header>
+    <section>
+        <label for="number">Numero (1 a 100):</label>
+        <input type="number" name="number" id="number">
+        <input type="button" value="adicionar" id="add">
+        <select name="" id="progresso" size="6">
+
+        </select>
+        <input type="button" value="Finalizar" id="Finalizar">
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>feito pelo artxdev</p>
+    </footer>
+    <script>
+        let numtxt = document.querySelector('#number')
+        let add = document.querySelector('#add')
+        let progresso = document.querySelector('#progresso')
+        let res = document.querySelector('#res')
+        let finalizar = document.querySelector('#Finalizar')
+        let vetor = []
+
+        //  ADICIONA E MOSTRA PROGRESSO 
+        add.addEventListener("click", adicionar)
+        function adicionar() {
+            let number = Number(numtxt.value)
+            if (number === 0) {
+                alert("adicione um numero")
+            } else if (number > 100) {
+                alert("numero invalido")
+            } else {
+                vetor.push(number)
+                let option = document.createElement('option')
+                option.innerHTML += `o valor ${number} foi adicionado </br>`
+                progresso.appendChild(option)
+                numtxt.value = ''
+                numtxt.focus()
+            }
+        }
+
+        //FAZ OS CALCULOS E MOSTRA
+
+        finalizar.addEventListener("click", vetores)
+        function vetores() {
+            let soma = 0
+            for (let i = 0; i < vetor.length; i++) {
+                soma += vetor[i]
+            }
+
+            let media = soma / vetor.length
+
+            vetor.sort((a, b) => a - b)
+            res.innerHTML = `temos ${vetor.length} cadastrados </br>`
+            res.innerHTML += `o maio valor foi ${vetor.at(-1)} </br>`
+            res.innerHTML += `o menor valor foi ${vetor.at(0)} </br>`
+            res.innerHTML += `a soma dos valores é ${soma} </br>`
+            res.innerHTML += `a media dos valores é ${media}`
+
+        }
+    </script>
+</body>
+
+</html>
