@@ -102,16 +102,18 @@
                         res.innerHTML += `${c} 👉`
                     }
                     res.innerHTML += '🏁'
-                }
-
-                else {
-                    for (var c = Number(start.value); c <= Number(end.value); c += Number(jump.value)) {
-                        res.innerHTML += `${c} 👉`
+                } else
+                    if (Number(start.value) > Number(end.value)) {
+                        for (var c = Number(start.value); c >= Number(end.value); c -= Number(jump.value)) {
+                            res.innerHTML += `${c} 👉`
+                        }
+                        res.innerHTML += '🏁'
+                    } else {
+                        for (var c = Number(start.value); c <= Number(end.value); c += Number(jump.value)) {
+                            res.innerHTML += `${c} 👉`
+                        }
+                        res.innerHTML += '🏁'
                     }
-                    res.innerHTML += '🏁'
-                }
-
-
         }
 
         reset.addEventListener("click", clear)
