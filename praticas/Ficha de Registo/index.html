@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div id="res">
+
+        </div>
+    </section>
+    <script>
+        let cadastro = JSON.parse(localStorage.getItem("dadosSalvos"))
+        let res = document.querySelector('#res')
+
+
+        res.innerHTML = `seja bem-vindo(a)${cadastro.nome} </br>`
+        res.innerHTML += `vi que voce trabalha com ${cadastro.trabalho} </br>`
+        res.innerHTML += `e voce tem ${cadastro.idade} anos parabens </br>`
+    </script>
+</body>
+
+</html>

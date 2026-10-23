@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Cadastro Ficha</h1>
+        <form action="index.html" method="post">
+            <label for="user">Nome🚹</label>
+            <input type="text" name="Nome" id="user" placeholder="seu nome" required>
+            <label for="job">Profissão👨‍💻</label>
+            <input type="text" name="Profissão" id="job" placeholder="sua profissão" required>
+            <label for="year">Idade♾</label>
+            <input type="number" name="Idade" id="year" placeholder="sua idade" min="18"> <br>
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+    </section>
+    <script>
+        let submit = document.querySelector('#submit')
+
+        // Guarda os dados para proxima pagina
+
+        submit.addEventListener("click", function (event) {
+            event.preventDefault();
+            let user = document.querySelector('#user').value;
+            let job = document.querySelector('#job').value;
+            let year = Number(document.querySelector('#year').value);
+            if (user == "" || job == "" || year == "") {
+                alert("preencha corretamente")
+            } else {
+                let dados = {
+                    nome: user,
+                    trabalho: job,
+                    idade: year
+                };
+
+                localStorage.setItem("dadosSalvos", JSON.stringify(dados));
+                window.location.href = "index.html";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
