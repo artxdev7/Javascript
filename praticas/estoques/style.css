@@ -1,0 +1,114 @@
+:root {
+    --fundo: #F0F2F0;
+    --bt-ou-destaque: #244030;
+    --principal1: #F2C335;
+    --principal2: #F2B138;
+    --principal3: #A69F44;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(3, 1fr);
+    min-height: 100dvh;
+    background-color: var(--fundo);
+}
+
+header {
+    background-color: red;
+    grid-area: 1 / 1 / -8 / -1;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    grid-area: 3 / 1 / -1 / -1;
+}
+
+footer {
+    background-color: green;
+    grid-area: 8 / 1 / -1 / -1;
+}
+
+nav {
+    background-color: yellow;
+    grid-area: 2 / 1 / -7 / -1;
+}
+
+#produtos {
+    padding: 10px;
+    background-color: var(--fundo);
+    border: 1px solid var(--principal2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.285);
+}
+
+#produtos>h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-weight: normal;
+    color: var(--bt-ou-destaque);
+}
+
+.remove {
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.remove:hover {
+    transform: scale(1.04);
+    background-color: rgb(168, 0, 0);
+    transition: all .4s ease;
+}
+
+.add {
+    background-color: var(--bt-ou-destaque);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.add:hover {
+    transform: scale(1.04);
+    background-color: rgb(0, 193, 0);
+    transition: all .4s ease;
+}
+
+.saiba {
+    background-color: var(--principal2);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.saiba:hover {
+    transform: scale(1.04);
+    background-color: rgb(170, 170, 2);
+    transition: all .4s ease;
+}
+
+/*<section id="produtos">
+            <h1>CAFE</h1>
+            <input type="button" value="Retirar 1" class="remove">
+            <input type="button" value="Adicionar 1" class="add">
+            <input type="button" value="Saiba mais" class="saiba">
+            <div id="res">
+            </div>
+ </section>*/
