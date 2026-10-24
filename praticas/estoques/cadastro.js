@@ -10,16 +10,31 @@ function cadastro(event) {
     if (nomepro === "" || valorpro === 0) {
         alert('[ERROR] Verifique novamente')
     } else {
+        let produtosSalvos = JSON.parse(localStorage.getItem("produtosSalvos")) || [];
 
         let produto = {
             nome: nomepro,
             valor: valorpro,
             quantidade: quantidadepro
         }
-        localStorage.setItem("produtosSalvos", JSON.stringify(produto))
+
+        produtosSalvos.push(produto)
+        localStorage.setItem("produtosSalvos", JSON.stringify(produtosSalvos))
         alert("Produto cadastrado com sucesso!")
+        window.location.href = "produtos.html"
     }
 
 
 
 }
+
+let nav = document.querySelector('#hamburguer')
+let menu = document.querySelector('#menu')
+
+menu.addEventListener("click", function menus() {
+    if (nav.style.display == "none" || nav.style.display == "") {
+        nav.style.display = "flex"
+    } else {
+        nav.style.display = "none"
+    }
+})
