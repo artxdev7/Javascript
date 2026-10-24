@@ -46,6 +46,7 @@ header>h1 {
     position: absolute;
     left: 90%;
     top: 10%;
+    cursor: pointer;
 
 }
 
@@ -124,6 +125,7 @@ nav>a:hover {
     padding: 3px;
     border-radius: 6px;
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .remove:hover {
@@ -140,6 +142,7 @@ nav>a:hover {
     padding: 3px;
     border-radius: 6px;
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .add:hover {
@@ -170,6 +173,7 @@ nav>a:hover {
     font-weight: bold;
     padding: 3px;
     border-radius: 6px;
+    margin-bottom: 10px;
 
 }
 
@@ -181,6 +185,68 @@ nav>a:hover {
 
 #res {
     text-align: center;
+}
+
+@media screen and (min-width:730px) and (max-width:950px) {
+    section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 20%;
+    }
+
+    #store {
+        left: 50%;
+        top: 25%;
+
+    }
+
+    header>h1 {
+
+        top: 50%;
+        left: 47%;
+
+    }
+
+}
+
+@media screen and (min-width:950px) {
+    section {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 30%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    #store {
+        left: 49%;
+        top: 20%;
+
+    }
+
+    header>h1 {
+
+        top: 50%;
+        left: 47%;
+
+    }
+
+    main {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .add {
+        margin-top: 10px;
+    }
+
 }
 
 /*<section id="produtos">
