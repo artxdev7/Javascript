@@ -1,5 +1,9 @@
 
 let submit = document.querySelector('#submit')
+let empresa = document.querySelector('#empresa')
+let nome = localStorage.getItem("login")
+
+empresa.innerHTML = `${nome}`
 
 submit.addEventListener("click", cadastro)
 function cadastro(event) {

@@ -1,5 +1,9 @@
 let produtosSalvos = JSON.parse(localStorage.getItem("produtosSalvos")) || [];
 let main = document.querySelector('main');
+let empresa = document.querySelector('#empresa')
+let nome = localStorage.getItem("login")
+
+empresa.innerHTML = `${nome}`
 
 produtosSalvos.forEach(function (produto, index) {
     let section = document.createElement('section');

@@ -26,22 +26,26 @@
         <span class="material-symbols-outlined" id="store">
             storefront
         </span>
-        <h1>Store</h1>
+        <div id="empresa"></div>
         <span class="material-symbols-outlined" id="menu">
             menu
         </span>
     </header>
     <nav id="hamburguer">
         <a href="produtos.html">produtos</a>
+        <a href="login.html">Login</a>
     </nav>
     <main>
         <section>
             <label for="nomepro">Nome:</label>
-            <div><input type="text" name="nomepro" id="nomepro" placeholder="Nome do produto"></div>
+            <div class="login"><input type="text" name="nomepro" id="nomepro" placeholder="Nome do produto"
+                    autocomplete="off"></div>
             <label for="valorpro">Preço:</label>
-            <div><input type="number" name="valorpro" id="valorpro" placeholder="Preço do produto em R$"></div>
+            <div class="login"><input type="number" name="valorpro" id="valorpro" placeholder="Preço do produto em R$">
+            </div>
             <label for="quantidadepro">Quantidade:</label>
-            <div><input type="number" name="quantidade" id="quantidadepro" placeholder="quantidade do produto"></div>
+            <div class="login"> <input type="number" name="quantidade" id="quantidadepro"
+                    placeholder="quantidade do produto"></div>
             <input type="button" value="Cadastrar" id="submit">
         </section>
     </main>
