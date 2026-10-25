@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="res"></div>
+    <input type="button" value="add 1" id="add">
+    <input type="button" value="remove 1" id="remove">
+    <script>
+        let res = document.querySelector('#res')
+        let produtos = [{
+            nome: "feijão",
+            quantidade: 100
+        }]
+        let add = document.querySelector('#add')
+        let remove = document.querySelector('#remove')
+
+        produtos.forEach(function (produto, index) {
+            res.innerHTML = `quantidade: ${produto.quantidade} | nome: ${produto.nome}`
+            add.addEventListener("click", function () {
+                produtos[index].quantidade++
+                res.innerHTML = `quantidade ${produto.quantidade} nome: ${produto.nome}`
+            })
+            remove.addEventListener("click", function () {
+                produtos[index].quantidade--
+                res.innerHTML = `quantidade ${produto.quantidade} nome: ${produto.nome}`
+            })
+        })
+    </script>
+</body>
+
+</html>
